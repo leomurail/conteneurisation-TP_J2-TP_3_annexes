@@ -4,12 +4,10 @@ build:
 	docker build -t backend:latest ./backend
 	docker build -t frontend:latest ./frontend
 
-# Optionnel si on utilise kind
 load-kind:
 	kind load docker-image backend:latest
 	kind load docker-image frontend:latest
 
-# Optionnel si on utilise k3d
 load-k3d:
 	k3d image import backend:latest frontend:latest -c mycluster
 
