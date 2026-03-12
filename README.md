@@ -10,24 +10,28 @@ Il contient un **backend** (API Node.js) et un **frontend** (Serveur Web Node.js
 make build
 ```
 
-### 2. Déployer l'application
+### 2. Charger les images dans Minikube
+```bash
+make load-minikube
+```
+
+### 3. Déployer l'application
 ```bash
 make deploy
 ```
 
-### 3. Vérifier le déploiement
+### 4. Vérifier le déploiement
 ```bash
-kubectl get pods
-kubectl get services
+make status
 ```
 
-### 4. Accéder à l'application
+### 5. Accéder à l'application
 ```bash
 make port-forward
 ```
 Allez sur `http://localhost:8080` dans votre navigateur.
 
-### 5. Nettoyer
+### 6. Nettoyer
 ```bash
 make clean
 ```
