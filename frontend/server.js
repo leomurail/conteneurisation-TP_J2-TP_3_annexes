@@ -3,7 +3,6 @@ const axios = require('axios');
 const app = express();
 const port = process.env.PORT || 8080;
 
-// Utilisation du nom du service Kubernetes 'backend-service'
 const BACKEND_URL = process.env.BACKEND_URL || 'http://backend-service:3000';
 
 app.get('/', async (req, res) => {
